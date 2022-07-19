@@ -15,7 +15,8 @@ router.get('/dashboard', async (req, res) => {
 
 router.get('/get-joke', async (req, res) => {
     handler().then((json) => {
-        const joke = json.body;
+        const parse = JSON.parse(json.body);
+        const joke = parse.msg;
         res.render('new', { joke });
     });
 });

@@ -13,7 +13,7 @@ const handler = async function () {
 
     return {
       statusCode: 200,
-      body: data,
+      body: JSON.stringify({ msg: data }),
     }
   } catch (error) {
     // output to netlify function log
