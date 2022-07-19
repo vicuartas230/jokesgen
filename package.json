@@ -5,6 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "start": "node index.js",
+    "build": "node run build",
     "develop": "nodemon src/index.js",
     "dev": "netlify dev"
   },
