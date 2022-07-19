@@ -4,8 +4,8 @@
   "description": "Jokes generator",
   "main": "./src/index.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "node run build",
+    "start": "./node_modules/.bin/netlify-lambda serve src",
+    "build": "./node_modules/.bin/netlify-lambda build src",
     "develop": "nodemon src/index.js",
     "dev": "netlify dev"
   },
@@ -19,7 +19,9 @@
     "express-session": "^1.17.3",
     "morgan": "^1.10.0",
     "netlify-cli": "^10.10.0",
+    "netlify-lambda": "^2.0.15",
     "node-fetch": "^2.6.7",
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.19",
+    "serverless-http": "^3.0.1"
   }
 }
