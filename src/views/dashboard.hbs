@@ -1,0 +1,33 @@
+{{#if data}}
+    <main>
+        <div class="container px-4 my-5">
+            <div class="container d-flex justify-content-end my-5">
+                <a href="/logout" type="submit" class="btn btn-outline-light btn-lg">
+                    <span class="glyphicon plyphicon-log-out">Log out</span>
+                </a>
+            </div>
+            <div class="row gx-5">
+                <div class="col">
+                <div class="border bg-light">
+                    <button id="generate" type="button" class="joke-button btn btn-success btn-block">Get My Jokes</button>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border bg-light">
+                    <button id="list" type="button" class="joke-button btn btn-success btn-block">My Jokes</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{{else}}
+    <main>
+        <div class="container my-5">
+            <div class="container">
+                <div>
+                    <div class="alert alert-light text-center">You are not logged. Do it <a href="/">here!</a></div>
+                </div>
+            </div>
+        </div>
+    </main>
+{{/if}}
