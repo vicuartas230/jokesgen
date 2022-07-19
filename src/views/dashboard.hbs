@@ -1,4 +1,4 @@
-{{#if data}}
+{{!-- {{#if data}} --}}
     <main>
         <div class="container px-4 my-5">
             <div class="container d-flex justify-content-end my-5">
@@ -9,18 +9,18 @@
             <div class="row gx-5">
                 <div class="col">
                 <div class="border bg-light">
-                    <button id="generate" type="button" class="joke-button btn btn-success btn-block">Get My Jokes</button>
+                    <a href="/get-joke" id="generate" type="button" class="joke-button btn btn-success btn-block">Get Jokes</a>
                 </div>
                 </div>
                 <div class="col">
                 <div class="border bg-light">
-                    <button id="list" type="button" class="joke-button btn btn-success btn-block">My Jokes</button>
+                    <a href="/my-jokes" id="list" type="button" class="joke-button btn btn-success btn-block">My Jokes</a>
                 </div>
                 </div>
             </div>
         </div>
     </main>
-{{else}}
+{{!-- {{else}}
     <main>
         <div class="container my-5">
             <div class="container">
@@ -30,4 +30,4 @@
             </div>
         </div>
     </main>
-{{/if}}
+{{/if}} --}}

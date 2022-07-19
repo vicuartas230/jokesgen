@@ -1,1 +1,24 @@
-<h1>JOKES</h1>
+<div class="container mt-5">
+    <div class="container d-flex justify-content-between my-5">
+        <a href="/dashboard" class="btn btn-outline-light btn-lg">
+            <span class="glyphicon plyphicon-log-out">Home</span>
+        </a>
+        <a href="/logout" class="btn btn-outline-light btn-lg">
+            <span class="glyphicon plyphicon-log-out">Log out</span>
+        </a>
+    </div>
+    <div class="row">
+        {{#each jokes}}
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            Chuck Norris
+                        </h4>
+                        <p>{{value}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
