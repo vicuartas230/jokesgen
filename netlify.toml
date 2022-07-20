@@ -1,6 +1,5 @@
 [build]
-    functions = 'functions'
-    publish = 'src'
+    base = "src/"
 
 [functions]
     directory = ".netlify/functions/"
