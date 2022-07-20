@@ -3,6 +3,8 @@ const supabase = createClient('https://lmihtsgzhbpparvdzjzt.supabase.co', 'eyJhb
 const express = require('express');
 const { handler } = require('../../.netlify/functions/get_joke/get_joke');
 const router = express.Router();
+const fetch = require('node-fetch');
+
 
 router.get('/dashboard', async (req, res) => {
     const user = supabase.auth.user();
@@ -14,9 +16,12 @@ router.get('/dashboard', async (req, res) => {
 });
 
 router.get('/get-joke', async (req, res) => {
-    handler().then((json) => {
-        const parse = JSON.parse(json.body);
-        const joke = parse.msg;
+    const url = 'https://genjoke.netlify.app/.netlify/functions/get_joke/get_joke';
+    const handler = fetch(url);
+    handler.then((res) => {
+        return res.json();
+    }).then((data) => {
+        const joke = data.msg;
         res.render('new', { joke });
     });
 });
